@@ -59,7 +59,7 @@
                 {% for article in article_list %}
                   <li>
                     <h3>{{ article.article_title }}</h3>
-                    <p>{{ article.article_body }}</p>
+                    <p>{{ article.article_body|truncatechars:400 }}</p>
                     <a href="{% url 'index:article' article.id %}">Read more</a>
                   </li>
                 {% endfor %}
