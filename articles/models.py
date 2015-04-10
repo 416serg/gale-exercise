@@ -5,8 +5,8 @@ class Article(models.Model):
     article_author = models.CharField(max_length=200)
     pub_date = models.DateTimeField('date published')
     article_category = models.CharField(max_length=200)
-    article_hero = models.ImageField()
-    article_img = models.ImageField()
+    article_hero = models.ImageField(upload_to="articles")
+    article_img = models.ImageField(upload_to="articles")
     article_body = models.TextField()
 
     def __unicode__(self):
