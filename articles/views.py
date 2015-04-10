@@ -10,6 +10,7 @@ from .models import Article
 class IndexView(generic.ListView):
     template_name = 'articles/index.html'
     context_object_name = 'article_list'
+    random_article = Article.objects.order_by('?')[0]
 
     def get_queryset(self):
         """Return all articles"""
