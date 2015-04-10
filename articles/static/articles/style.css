@@ -4,10 +4,18 @@
   top: 25;
   z-index: 2;
   text-decoration: none;
+  color: black;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 5px;
+  border-radius: 5px;
 }
 
 #paragraph {
   margin-top: 30px;
+}
+
+.random-hero {
+  margin-bottom: 15px;
 }
 
 #wrapper {

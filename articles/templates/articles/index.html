@@ -52,7 +52,7 @@
             <div class="col-lg-12">
               {% with article_list|random as article %}
               <h2>{{ article.article_title }}</h2>
-              <img src="/index{{ article.article_hero.url }}" alt=""  class="img-responsive"/>
+              <img src="/index{{ article.article_hero.url }}" alt=""  class="img-responsive random-hero"/>
               <p>{{ article.article_body|truncatechars:400 }}</p>
               {% endwith %}
             </div>
