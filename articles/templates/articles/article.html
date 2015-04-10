@@ -81,8 +81,37 @@
             </div>
           </div>
           <div class="row" id="read-more">
-            <div class="col-sm-4">
-
+            <div class="col-xs-6 col-sm-6 col-md-3">
+              {% with article_list|random as article %}
+              <a href="{% url 'index:article' article.id %}">
+                <img src="/index{{ article.article_hero.url }}" alt=""  class="img-responsive"/>
+                <h5>{{ article.article_title }}</h5>
+              </a>
+              {% endwith %}
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-3">
+              {% with article_list|random as article %}
+              <a href="{% url 'index:article' article.id %}">
+                <img src="/index{{ article.article_hero.url }}" alt=""  class="img-responsive"/>
+                <h5>{{ article.article_title }}</h5>
+              </a>
+              {% endwith %}
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-3">
+              {% with article_list|random as article %}
+              <a href="{% url 'index:article' article.id %}">
+                <img src="/index{{ article.article_hero.url }}" alt=""  class="img-responsive"/>
+                <h5>{{ article.article_title }}</h5>
+              </a>
+              {% endwith %}
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-3">
+              {% with article_list|random as article %}
+              <a href="{% url 'index:article' article.id %}">
+                <img src="/index{{ article.article_hero.url }}" alt=""  class="img-responsive"/>
+                <h5>{{ article.article_title }}</h5>
+              </a>
+              {% endwith %}
             </div>
           </div>
         </div>

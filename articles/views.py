@@ -2,6 +2,7 @@ from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.views import generic
+from django.utils import timezone
 
 
 from .models import Article
@@ -14,7 +15,7 @@ class IndexView(generic.ListView):
 
     def get_queryset(self):
         """Return all articles"""
-        return Article.objects.order_by('-pub_date')
+        return Article.objects.order_by('-pub_date').filter(pub_date__lte=timezone.now())
 
 class ArticleView(generic.DetailView):
     model = Article
